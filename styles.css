@@ -18,7 +18,16 @@
 }
 
 .bookDisplay {
-  margin: 20px 80px 0 80px;
+  margin: 20px 100px 0 100px;
+}
+
+.booksButton {
+  margin: 10px;
+}
+
+.bookCoverImage {
+  height: 30vh;
+  object-fit: cover;
 }
 
 i.removeBooks {
