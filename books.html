@@ -3,47 +3,54 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Galvanize Reads</title>
+  <title>Books</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
 </head>
 
 <body>
   <nav>
     <div class="nav-wrapper">
       <img class="companyLogo left" src="http://www.bradleysbookoutlet.com/wp-content/uploads/2013/06/bradleys-book-outlet-books-only-logo.png" />
-      <a href="index.html" class="brand-logo left">Galvanize Reads</a>
+      <a href="index.html" class="companyName brand-logo left">Galvanize Reads</a>
     </div>
   </nav>
   <main>
-    <a class="booksButton waves-effect waves-light btn-large" href="books.html">Books</a>
-    <a class="authorsButton waves-effect waves-light btn-large" href="authors.html">Authors</a>
-
+    <a class="booksButton btn-large" href="books.html">Books</a>
+    <a class="authorsButton btn-large" href="authors.html">Authors</a>
+    <a class="addABookButton btn-large right" href="addbook.html">Add a book</a>
+    <div class="bookDisplay">
+    </div>
+    <div class="oneBookDisplay">
+    </div>
   </main>
   <script id="books-template" type="text/x-handlebars-template">
     {{#each books}}
-    <div class="bookDisplay col s12 m7">
-      <div class="card horizontal">
+    <div class="bookInfo card horizontal">
+      <a class="bookID" href="books.html?id={{id}}">
         <div class="card-image">
           <img class="bookCoverImage" src="{{cover_url}}">
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <div class="bookDisplayTop">
-              <i class="removeBooks material-icons right z-depth-2">delete</i>
-              <i class="editBooks material-icons right z-depth-2">mode_edit</i>
-              <h4>{{title}}</h4>
-            </div>
-            <h5>Authors</h5>
-            <h5>{{genre}}</h5>
-            <p>{{description}}</p>
+      </a>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <div class="bookDisplayTop">
+            <i class="removeBooks material-icons right z-depth-2">delete</i>
+            <i class="editBooks material-icons right z-depth-2">mode_edit</i>
+            <h4 class="bookTitle">{{title}}</h4>
           </div>
+          <h5>Authors</h5>
+          <h5>{{genre}}</h5>
+          <p class="bookDescription">{{description}}</p>
         </div>
       </div>
     </div>
+
     {{/each}}
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>

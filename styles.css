@@ -1,6 +1,14 @@
+main {
+  background-color: #dee2e8;
+}
+
 .companyLogo {
   width: 80px;
   margin-top: 5px;
+}
+
+.companyName {
+  font-family: 'Oswald';
 }
 
 .brand-logo {
@@ -23,11 +31,33 @@
 
 .booksButton {
   margin: 10px;
+  background-color: #3A5683;
+}
+
+.authorsButton {
+  background-color: #3A5683;
+}
+
+.addABookButton {
+  margin: 10px;
+  background-color: #3A5683;
 }
 
 .bookCoverImage {
-  height: 30vh;
+  height: 35vh;
   object-fit: cover;
+}
+
+.bookTitle {
+  font-family: 'Oswald';
+}
+
+.bookDescription {
+  font-family: 'Lato';
+}
+
+.bookInfo {
+  height: 55vh;
 }
 
 i.removeBooks {
@@ -35,6 +65,7 @@ i.removeBooks {
   border-radius: 6px;
   padding: 5px;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 i.editBooks {
@@ -42,4 +73,60 @@ i.editBooks {
   border-radius: 6px;
   padding: 5px;
   margin-left: 5px;
+  cursor: pointer;
+}
+
+
+/*.selectButtons {
+  display: flex;
+  flex-direction: column;
+}*/
+
+.addBookForm {
+  width: 55%;
+}
+
+.chooseAuthors {
+  display: block;
+}
+
+#addBookTitle {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+#addBookGenre {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+#addBookCoverURL {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+#addBookDescription {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  /*padding: 5px;*/
+}
+
+#addBookAuthors {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+.addAnotherAuthorButton {
+  background-color: #3A5683;
+}
+
+.submitBook {
+  width: 100%;
+  background-color: #3A5683;
+  margin-bottom: 5%;
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <img class="companyLogo left" src="http://www.bradleysbookoutlet.com/wp-content/uploads/2013/06/bradleys-book-outlet-books-only-logo.png" />
+      <a href="index.html" class="companyName brand-logo left">Galvanize Reads</a>
+    </div>
+  </nav>
+  <main>
+    <div class="selectButtons">
+      <a class="booksButton btn-large" href="books.html">Books</a>
+      <a class="authorsButton btn-large" href="authors.html">Authors</a>
+    </div>
+    <!-- <form class="createBook"> -->
+
+    <div class="addBookForm container">
+
+      <form class="col s12">
+
+        <div class="input-field col s5">
+          <input id="addBookTitle" type="text" class="validate">
+          <label class="active" for="addBookTitle">Title</label>
+        </div>
+        <div class="input-field col s5">
+          <input id="addBookGenre" type="text" class="validate">
+          <label class="active" for="addBookGenre">Genre</label>
+        </div>
+        <div class="input-field col s5">
+          <input id="addBookCoverURL" type="text" class="validate">
+          <label class="active" for="addBookCoverURL">Cover Image URL</label>
+        </div>
+        <div class="input-field col s5">
+          <textarea id="addBookDescription" class="materialize-textarea"></textarea>
+          <label class="active" for="addBookDescription">Description</label>
+        </div>
+        <div class="row">
+          <div class="input-field col s10">
+            <input id="addBookAuthors" type="text" class="validate">
+            <label class="active" for="addBookAuthors">Authors</label>
+          </div>
+          <i class="removeBooks material-icons z-depth-2">delete</i>
+        </div>
+        <div class="row">
+          <div class="input-field col s7">
+            <select class="chooseAuthors">
+            <option value="2">Author Two</option>
+            <option value="3">Author Three</option>
+          </select>
+          </div>
+          <button type="submit" class="addAnotherAuthorButton btn">Add Author</button>
+        </div>
+        <div class="col s8">
+          <button type="submit" class="submitBook btn-large" value="">Add Book</button>
+        </div>
+      </form>
+    </div>
+
+
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
