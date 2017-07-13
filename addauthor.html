@@ -22,46 +22,29 @@
       <a class="booksButton btn-large" href="books.html">Books</a>
       <a class="authorsButton btn-large" href="authors.html">Authors</a>
     </div>
-    <!-- <form class="createBook"> -->
 
-    <div class="addBookForm container">
+    <div class="addAuthorForm container">
 
-      <form class="addBook col s12">
+      <form class="addAuthor col s12">
 
         <div class="input-field col s5">
-          <input id="addBookTitle" type="text" class="validate" required>
-          <label class="active" for="addBookTitle">Title</label>
+          <input id="addAuthorFirstName" type="text" class="validate" required>
+          <label class="active" for="addAuthorFirstName">First Name</label>
         </div>
         <div class="input-field col s5">
-          <input id="addBookGenre" type="text" class="validate">
-          <label class="active" for="addBookGenre">Genre</label>
+          <input id="addAuthorLastName" type="text" class="validate" required>
+          <label class="active" for="addAuthorLastName">Last Name</label>
         </div>
         <div class="input-field col s5">
-          <input id="addBookCoverURL" type="text" class="validate">
-          <label class="active" for="addBookCoverURL">Cover Image URL</label>
+          <input id="addPortraitURL" type="text" class="validate">
+          <label class="active" for="addPortraitURL">Portrait URL</label>
         </div>
         <div class="input-field col s5">
-          <textarea id="addBookDescription" class="materialize-textarea"></textarea>
-          <label class="active" for="addBookDescription">Description</label>
-        </div>
-        <div class="row">
-          <div class="input-field col s10">
-            <input id="addBookAuthors" type="text" class="validate">
-            <label class="active" for="addBookAuthors">Authors</label>
-          </div>
-          <i class="removeBooks material-icons z-depth-2">delete</i>
-        </div>
-        <div class="row">
-          <div class="input-field col s7">
-            <select class="chooseAuthors">
-            <option value="2">Author Two</option>
-            <option value="3">Author Three</option>
-          </select>
-          </div>
-          <button type="submit" class="addAnotherAuthorButton btn">Add Author</button>
+          <textarea id="addAuthorBio" class="materialize-textarea"></textarea>
+          <label class="active" for="addAuthorBio">Biography</label>
         </div>
         <div class="col s8">
-          <button type="submit" class="submitBook btn-large" value="">Add Book</button>
+          <button type="submit" class="submitAuthor btn-large" value="">Add Author</button>
         </div>
       </form>
     </div>
@@ -72,7 +55,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-  <script src="book.js"></script>
+  <script src="authorapp.js"></script>
 </body>
 
 </html>

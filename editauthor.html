@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Add Book</title>
+  <title>Edit Book</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -22,57 +22,58 @@
       <a class="booksButton btn-large" href="books.html">Books</a>
       <a class="authorsButton btn-large" href="authors.html">Authors</a>
     </div>
-    <!-- <form class="createBook"> -->
+    <div class="editAuthorDisplay">
 
-    <div class="addBookForm container">
+    </div>
+    <div class="col s8">
+      <button type="submit" class="submitEditAuthor btn-large" value="">Edit Author</button>
+    </div>
+  </main>
+  <script id="authors-template" type="text/x-handlebars-template">
+    {{#each authors}}
+    <div class="editAuthorForm container">
 
-      <form class="addBook col s12">
-
+      <form class="editAuthor col s12">
         <div class="input-field col s5">
-          <input id="addBookTitle" type="text" class="validate" required>
-          <label class="active" for="addBookTitle">Title</label>
+          <input id="editAuthorFirstName" type="text" class="validate" value="{{first_name}}" required>
+          <label class="active" for="editAuthorFirstName">Title</label>
         </div>
         <div class="input-field col s5">
-          <input id="addBookGenre" type="text" class="validate">
-          <label class="active" for="addBookGenre">Genre</label>
+          <input id="editAuthorLastName" type="text" class="validate" value={{last_name}}>
+          <label class="active" for="editAuthorLastName">Genre</label>
         </div>
         <div class="input-field col s5">
-          <input id="addBookCoverURL" type="text" class="validate">
-          <label class="active" for="addBookCoverURL">Cover Image URL</label>
+          <input id="editPortraitURL" type="text" class="validate" value={{portrait_url}}>
+          <label class="active" for="editPortraitURL">Cover Image URL</label>
         </div>
         <div class="input-field col s5">
-          <textarea id="addBookDescription" class="materialize-textarea"></textarea>
-          <label class="active" for="addBookDescription">Description</label>
+          <textarea id="editAuthorBio" class="materialize-textarea">{{bio}}</textarea>
+          <label class="active" for="editAuthorBio">Description</label>
         </div>
         <div class="row">
           <div class="input-field col s10">
-            <input id="addBookAuthors" type="text" class="validate">
-            <label class="active" for="addBookAuthors">Authors</label>
+            <input id="editAuthorBooks" type="text" class="validate">
+            <label class="active" for="editAuthorBooks">Books</label>
           </div>
           <i class="removeBooks material-icons z-depth-2">delete</i>
         </div>
         <div class="row">
           <div class="input-field col s7">
-            <select class="chooseAuthors">
-            <option value="2">Author Two</option>
-            <option value="3">Author Three</option>
-          </select>
+            <select class="chooseBooks">
+          <option value="2">Book Two</option>
+          <option value="3">Book Three</option>
+        </select>
           </div>
-          <button type="submit" class="addAnotherAuthorButton btn">Add Author</button>
-        </div>
-        <div class="col s8">
-          <button type="submit" class="submitBook btn-large" value="">Add Book</button>
+          <button type="submit" class="addAnotherBookButton btn">Add Book</button>
         </div>
       </form>
     </div>
-
-
-
-  </main>
+    {{/each}}
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-  <script src="book.js"></script>
+  <script src="author.js"></script>
 </body>
 
 </html>

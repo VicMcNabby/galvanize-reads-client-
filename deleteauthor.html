@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Books</title>
+  <title>Delete Books</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -20,48 +20,50 @@
   <main>
     <a class="booksButton btn-large" href="books.html">Books</a>
     <a class="authorsButton btn-large" href="authors.html">Authors</a>
-    <a class="addABookButton btn-large right" href="addbook.html">Add a book</a>
-    <div class="bookDisplay">
+    <div class="oneAuthorDisplay">
+
     </div>
-    <div class="oneBookDisplay">
+    <div class="deleteButtonContainer">
+      <button type="submit" class="deleteAuthorButton btn-large" value="">Delete Author?</button>
     </div>
+
   </main>
-  <script id="books-template" type="text/x-handlebars-template">
-    {{#each books}}
-    <div class="bookInfo card horizontal">
-      <a class="bookID" href="books.html?id={{id}}">
+  <script id="authors-template" type="text/x-handlebars-template">
+    {{#each authors}}
+    <div class="authorInfo card horizontal">
+      <a class="authorID" href="authors.html?id={{id}}">
         <div class="card-image">
-          <img class="bookCoverImage" src="{{cover_url}}">
+          <img class="authorPortraitURL" src="{{portrait_url}}">
       </a>
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <div class="bookDisplayTop">
-            <a class="deleteBook" href="deletebook.html?id={{id}}">
-              <i class="removeBooks material-icons right z-depth-2">delete</i>
+          <div class="authorDisplayTop">
+            <a class="deleteAuthor" href="deleteauthor.html?id={{id}}">
+              <i class="removeAuthors material-icons right z-depth-2">delete</i>
             </a>
-            <a class="editBook" href="editbook.html?id={{id}}">
-              <i class="editBooks material-icons right z-depth-2">mode_edit</i>
+            <a class="editAuthor" href="editauthor.html?id={{id}}">
+              <i class="editAuthors material-icons right z-depth-2">mode_edit</i>
             </a>
-            <h4 class="bookTitle">{{title}}</h4>
+            <h4 class="authorName">{{first_name}} {{last_name}}</h4>
           </div>
-          <div class="authorNamesHere">
-            <p>
-              Authors
-            </p>
+          <p class="authorBio">{{bio}}</p>
+          <p class="authorBooksTitle">Books</p>
+          <div class="authorBooks col s8">
+
           </div>
-          <h5>{{genre}}</h5>
-          <p class="bookDescription">{{description}}</p>
+          </div>
         </div>
       </div>
     </div>
+
     {{/each}}
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-  <script src="bookapp.js"></script>
+  <script src="authorapp.js"></script>
 </body>
 
 </html>

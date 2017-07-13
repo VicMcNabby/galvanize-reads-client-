@@ -10,6 +10,7 @@ function appReady() {
     .then(showBooks)
   getOneBook(id)
     .then(showOneBook)
+  deleteBook(id)
 }
 
 function getAllBooks() {
@@ -45,4 +46,16 @@ function getID() {
   let index = charArray.indexOf('=') + 1;
   let id = currentURL.substring(index);
   return id;
+}
+
+function deleteBook(id) {
+  $('.deleteBookButton').click((event) => {
+    alert('Book Deleted')
+    $.ajax({
+      url: `${API_URL}/books/${id}`,
+      type: 'DELETE',
+      success: function(result) {}
+    });
+    window.location = 'books.html'
+  })
 }

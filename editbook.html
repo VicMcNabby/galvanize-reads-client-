@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Add Book</title>
+  <title>Edit Book</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -22,53 +22,54 @@
       <a class="booksButton btn-large" href="books.html">Books</a>
       <a class="authorsButton btn-large" href="authors.html">Authors</a>
     </div>
-    <!-- <form class="createBook"> -->
+    <div class="editBookDisplay">
 
-    <div class="addBookForm container">
+    </div>
+    <div class="submitButtonSection col s8">
+      <button type="submit" class="submitEditBook btn-large" value="">Edit Book</button>
+    </div>
+  </main>
+  <script id="books-template" type="text/x-handlebars-template">
+    {{#each books}}
+    <div class="editBookForm container">
 
-      <form class="addBook col s12">
-
+      <form class="editBook col s12">
         <div class="input-field col s5">
-          <input id="addBookTitle" type="text" class="validate" required>
-          <label class="active" for="addBookTitle">Title</label>
+          <input id="editBookTitle" type="text" class="validate" value="{{title}}" required>
+          <label class="active" for="editBookTitle">Title</label>
         </div>
         <div class="input-field col s5">
-          <input id="addBookGenre" type="text" class="validate">
-          <label class="active" for="addBookGenre">Genre</label>
+          <input id="editBookGenre" type="text" class="validate" value={{genre}}>
+          <label class="active" for="editBookGenre">Genre</label>
         </div>
         <div class="input-field col s5">
-          <input id="addBookCoverURL" type="text" class="validate">
-          <label class="active" for="addBookCoverURL">Cover Image URL</label>
+          <input id="editBookCoverURL" type="text" class="validate" value={{cover_url}}>
+          <label class="active" for="editBookCoverURL">Cover Image URL</label>
         </div>
         <div class="input-field col s5">
-          <textarea id="addBookDescription" class="materialize-textarea"></textarea>
-          <label class="active" for="addBookDescription">Description</label>
+          <textarea id="editBookDescription" class="materialize-textarea">{{description}}</textarea>
+          <label class="active" for="editBookDescription">Description</label>
         </div>
         <div class="row">
           <div class="input-field col s10">
-            <input id="addBookAuthors" type="text" class="validate">
-            <label class="active" for="addBookAuthors">Authors</label>
+            <input id="editBookAuthors" type="text" class="validate">
+            <label class="active" for="editBookAuthors">Authors</label>
           </div>
           <i class="removeBooks material-icons z-depth-2">delete</i>
         </div>
         <div class="row">
           <div class="input-field col s7">
             <select class="chooseAuthors">
-            <option value="2">Author Two</option>
-            <option value="3">Author Three</option>
-          </select>
+          <option value="2">Author Two</option>
+          <option value="3">Author Three</option>
+        </select>
           </div>
           <button type="submit" class="addAnotherAuthorButton btn">Add Author</button>
         </div>
-        <div class="col s8">
-          <button type="submit" class="submitBook btn-large" value="">Add Book</button>
-        </div>
       </form>
     </div>
-
-
-
-  </main>
+    {{/each}}
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>

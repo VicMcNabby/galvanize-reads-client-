@@ -1,5 +1,11 @@
 main {
   background-color: #dee2e8;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.landingPageMain {
+  padding-top: 1%;
 }
 
 .companyLogo {
@@ -29,21 +35,59 @@ main {
   margin: 20px 100px 0 100px;
 }
 
+.oneBookDisplay {
+  margin: 20px 100px 0 100px;
+}
+
 .booksButton {
   margin: 10px;
   background-color: #3A5683;
+}
+
+.booksButton:hover {
+  background-color: #99bdf7;
+}
+
+.authorDisplay {
+  margin: 20px 100px 0 100px;
+}
+
+.oneAuthorDisplay {
+  margin: 20px 100px 0 100px;
 }
 
 .authorsButton {
   background-color: #3A5683;
 }
 
+.authorsButton:hover {
+  background-color: #99bdf7;
+}
+
 .addABookButton {
   margin: 10px;
-  background-color: #3A5683;
+  background-color: #76B041;
+}
+
+.addABookButton:hover {
+  background-color: #305112;
+}
+
+.addAuthorButton {
+  margin: 10px;
+  background-color: #76B041;
+}
+
+.addAuthorButton:hover {
+  background-color: #305112;
+}
+
+.card-content {
+  overflow: auto;
 }
 
 .bookCoverImage {
+  margin: 20px 0 0 10px;
   height: 35vh;
   object-fit: cover;
 }
@@ -58,6 +102,25 @@ main {
 
 .bookInfo {
   height: 55vh;
+}
+
+.authorPortraitURL {
+  margin: 20px 0 0 10px;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.authorInfo {
+  height: 55vh;
+}
+
+.authorName {
+  font-family: 'Oswald';
+}
+
+.authorBio {
+  font-family: 'Lato';
+  padding-bottom: 10px;
 }
 
 i.removeBooks {
@@ -76,57 +139,100 @@ i.editBooks {
   cursor: pointer;
 }
 
-
-/*.selectButtons {
-  display: flex;
-  flex-direction: column;
-}*/
-
-.addBookForm {
-  width: 55%;
-}
-
-.chooseAuthors {
+.chooseAuthors, .chooseBooks {
   display: block;
 }
 
-#addBookTitle {
+#addAuthorFirstName, #addAuthorLastName, #addPortraitURL, #addAuthorBio {
   border: 1px solid black;
   background-color: white;
   text-align: center;
 }
 
-#addBookGenre {
+#addBookTitle, #addBookGenre, #addBookCoverURL, #addBookDescription, #addBookAuthors {
   border: 1px solid black;
   background-color: white;
   text-align: center;
 }
 
-#addBookCoverURL {
-  border: 1px solid black;
-  background-color: white;
-  text-align: center;
-}
-
-#addBookDescription {
-  border: 1px solid black;
-  background-color: white;
-  text-align: center;
-  /*padding: 5px;*/
-}
-
-#addBookAuthors {
-  border: 1px solid black;
-  background-color: white;
-  text-align: center;
-}
-
-.addAnotherAuthorButton {
+.addAnotherAuthorButton, .addAnotherBookButton {
   background-color: #3A5683;
 }
 
-.submitBook {
+.addAnotherAuthorButton:hover, .addAnotherBookButton:hover {
+  background-color: #99bdf7;
+}
+
+.submitBook, .submitAuthor {
   width: 100%;
   background-color: #3A5683;
   margin-bottom: 5%;
+}
+
+.submitBook:hover {
+  background-color: #99bdf7;
+}
+
+.submitEditBook, .submitEditAuthor {
+  margin: auto;
+  width: 50%;
+  background-color: #3A5683;
+  margin-bottom: 5%;
+}
+
+.submitEditBook:hover, .submitEditAuthor:hover {
+  background-color: #99bdf7;
+}
+
+.deleteButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.deleteBookButton {
+  background-color: #E03616;
+}
+
+.deleteBookButton:hover {
+  background-color: #af1e03;
+}
+
+.editBookForm, .editAuthorForm, .addBookForm, .addAuthorForm {
+  width: 55%;
+}
+
+#editBookTitle, #editBookGenre, #editBookCoverURL, #editBookDescription, #editBookAuthors {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+#editAuthorFirstName, #editAuthorLastName, #editPortraitURL, #editAuthorBio {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+.authorBooks {
+  border: 1px solid black;
+  height: 12vh;
+  border-radius: 5px;
+}
+
+.authorBooksTitle {
+  font-family: 'Oswald';
+  font-size: 1.25em;
+}
+
+.deleteAuthorButton {
+  background-color: #E03616;
+}
+
+.deleteAuthorButton:hover {
+  background-color: #af1e03;
+}
+
+.submitButtonSection {
+  display: flex;
+  align-items: center;
 }
